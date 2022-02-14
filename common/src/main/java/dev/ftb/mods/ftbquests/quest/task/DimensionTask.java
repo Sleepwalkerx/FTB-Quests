@@ -84,6 +84,6 @@ public class DimensionTask extends BooleanTask {
 
 	@Override
 	public boolean canSubmit(TeamData teamData, ServerPlayer player) {
-		return !player.isSpectator() && player.level.dimension() == dimension;
+		return !player.isSpectator() && player.level.dimension() == dimension && teamData.canStartTasks(quest);
 	}
 }
